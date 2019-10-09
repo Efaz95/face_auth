@@ -33,14 +33,14 @@ values3 = """
     "gallery_name": "gallery1"
   }"""
 
-# response1 = requests.post('https://api.kairos.com/enroll', data=values1, headers=headers)
-# print(response1.json())
+response1 = requests.post('https://api.kairos.com/enroll', data=values1, headers=headers)
+print(response1.json())
 
-# response2 = requests.post('https://api.kairos.com/verify', data=values2, headers=headers)
-# confidence = response2.json()['images'][0]['transaction']['confidence']
-# print(confidence)
+response2 = requests.post('https://api.kairos.com/verify', data=values2, headers=headers)
+confidence = response2.json()['images'][0]['transaction']['confidence']
+print(confidence)
 response3 = requests.post('https://api.kairos.com/recognize', data=values3, headers=headers)
-# print(response3.json())
+print(response3.json())
 
 
 response4 = requests.post('https://api.kairos.com/detect', data=values3, headers=headers)
