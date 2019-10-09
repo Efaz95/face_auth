@@ -21,7 +21,7 @@ def take_photo():
 		temp = camera.read()
 
 	camera_capture = get_image()
-	filename = "image.jpg"
+	filename = "image2.jpg"
 	dirname = os.path.dirname(__file__)
 	cv2.imwrite(os.path.join(dirname+"user_gallery/",  filename), camera_capture)
 
