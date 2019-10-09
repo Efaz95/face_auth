@@ -1,5 +1,7 @@
+import os
 import tkinter as tk
 import cv2
+from PIL import ImageTk, Image
 
 
 window = tk.Tk()
@@ -20,7 +22,9 @@ def take_photo():
 
 	camera_capture = get_image()
 	filename = "image.jpg"
-	cv2.imwrite(filename,camera_capture)
+	dirname = os.path.dirname(__file__)
+	cv2.imwrite(os.path.join(dirname+"user_gallery/",  filename), camera_capture)
+
 	del(camera)
 
 
@@ -29,6 +33,7 @@ b1.pack()
 
 
 window.mainloop()
+
 
 
 
